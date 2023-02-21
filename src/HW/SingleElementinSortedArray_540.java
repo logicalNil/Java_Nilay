@@ -18,5 +18,10 @@ public class SingleElementinSortedArray_540 {
         return nums[left];
     }
 
-
+    public static void main(String[] args) {
+        int[] nums = {1, 1, 2, 2, 3, 3, 4, 4, 7, 8, 8};
+        int singleElement = singleNonDuplicate(nums);
+        System.out.println("The single element in the sorted array is " + singleElement);
+    }
+}
 
