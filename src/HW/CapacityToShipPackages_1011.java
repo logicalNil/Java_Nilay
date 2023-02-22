@@ -1,7 +1,7 @@
 package HW;
 
 public class CapacityToShipPackages_1011 {
-    public static int shipWithinDays(int[] weights, int D) {
+    public static int shipWithinDays(int[] weights, int days) {
         int left = 0;
         int right = 0;
         for (int weight : weights) {
@@ -19,7 +19,7 @@ public class CapacityToShipPackages_1011 {
                 }
                 cur += weight;
             }
-            if (need > D) {
+            if (need > days) {
                 left = mid + 1;
             } else {
                 right = mid;
