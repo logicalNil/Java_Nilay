@@ -25,5 +25,12 @@ public class IPO_502 {
         }
         return W;
     }
-
+    public static void main(String[] args) {
+        int k = 2;
+        int W = 0;
+        int[] Profits = {1,2,3};
+        int[] Capital = {0,1,1};
+        int maxCapital = new IPO_502().findMaximizedCapital(k, W, Profits, Capital);
+        System.out.println("The maximum capital is " + maxCapital);
+    }
 }
