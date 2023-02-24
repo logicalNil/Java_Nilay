@@ -20,6 +20,9 @@ public class MinimizeDeviationArray_1675 {
         }
         return minDeviation;
     }
-
+    public static void main(String[] args) {
+        MinimizeDeviationArray_1675 obj = new MinimizeDeviationArray_1675();
+        int[] nums = {4,1,5,20,3};
+        System.out.println(obj.minimizeDeviation(nums));
     }
 }
