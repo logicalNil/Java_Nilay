@@ -22,6 +22,12 @@ public class EditDistance_72 {
         }
         return dp[a][b];
     }
+    public static void main(String[] args) {
+        EditDistance_72 obj = new EditDistance_72();
+        String word1 = "horse";
+        String word2 = "ros";
+        System.out.println(obj.minDistance(word1, word2));
+    }
 
 }
 
