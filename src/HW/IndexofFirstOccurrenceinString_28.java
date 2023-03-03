@@ -1,7 +1,9 @@
 package HW;
 
+import org.jetbrains.annotations.NotNull;
+
 public class IndexofFirstOccurrenceinString_28 {
-    public int strStr(String haystack, String needle) {
+    public int strStr(String haystack, @NotNull String needle) {
         if (needle.length() == 0) return 0;
         if (haystack.length() == 0) return -1;
         int i = 0, j = 0;
@@ -21,7 +23,7 @@ public class IndexofFirstOccurrenceinString_28 {
     public static void main(String[] args) {
         IndexofFirstOccurrenceinString_28 obj = new IndexofFirstOccurrenceinString_28();
         String haystack = "hello";
-        String needle = "ll";
+        String needle = "ello";
         System.out.println(obj.strStr(haystack, needle));
     }
 }
