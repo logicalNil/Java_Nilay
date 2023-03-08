@@ -6,7 +6,7 @@ public class OwnException {
         {
             super(s);
         }
-        public static void check(int value) throws Newexception {
+        public static void check(int[] time, int value, long mid) throws Newexception {
             if (value != 0) {
                 System.out.println("Go Ahead");}
             else
@@ -15,7 +15,7 @@ public class OwnException {
     }
     public static void main(String[] args) {
         try {
-            Newexception.check(20/0);
+            Newexception.check(time, 20/0, mid);
         } catch (Newexception e) {
             System.out.println(e + " Arithmetic Exception");
         }
