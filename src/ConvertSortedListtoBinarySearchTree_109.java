@@ -49,5 +49,6 @@ public class ConvertSortedListtoBinarySearchTree_109 {
     private class ListNode {
         public ListNode next;
         public Object val;
+
     }
 }
