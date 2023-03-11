@@ -9,6 +9,8 @@
  * }
  */
 
+import HW.ListNode;
+
 import javax.swing.tree.TreeNode;
 
 /**
@@ -44,11 +46,5 @@ public class ConvertSortedListtoBinarySearchTree_109 {
         root.left = sortedListToBST(head);
         root.right = sortedListToBST(slow.next);
         return root;
-    }
-
-    private class ListNode {
-        public ListNode next;
-        public Object val;
-
     }
 }
