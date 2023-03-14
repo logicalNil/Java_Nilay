@@ -2,17 +2,6 @@ package HW;
 
 import javax.swing.tree.TreeNode;
 
-public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
-
 public class SumRootLeafNumbers_129{
 
     public int sumNumbers(TreeNode root) {
