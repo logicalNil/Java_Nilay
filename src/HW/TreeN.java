@@ -6,6 +6,5 @@ public  class TreeN {
     TreeNode right;
 
     TreeN(int x) {
-        val = x;
-    }
+        val = x;}
 }
