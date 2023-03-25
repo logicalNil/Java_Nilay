@@ -1,26 +1,33 @@
 package HW;
 
-import static HW.NumberOperationsMakeNetworkConnected_1319.union;
-
 public class CountUnreachablePairsofNodesinUndirectedGraph_2316 {
-    public long countPairs(int n,int[][] edges){
-        int[] parent = new int[n];
-        for (int i = 0; i < n; i++) {
-            parent[i] = i;
+     public long countPairs(int n, int[][] edges) {
+        long ans=0;
+        List<List<Integer>>adj=new ArrayList<>();
+        for(int i=0;i<n;i++) adj.add(new ArrayList<>());
+        for(int d[]:edges){
+            adj.get(d[0]).add(d[1]);
+            adj.get(d[1]).add(d[0]);
         }
-        for (int[] edge : edges) {
-            union(parent, edge[0], edge[1]);
+        boolean vis[]=new boolean[n];
+        int nvis=0;
+        for(int i=0;i<n;i++){
+            if(!vis[i]){
+                int cnt=dfs(i,vis,adj);
+                ans+=(long)cnt*nvis;
+                nvis+=cnt;
+            }
         }
-        int count = 0;
-        for (int i = 0; i < n; i++) {
-            if (parent[i] == i) count++;
-        }
-        return (long)count * (count - 1) / 2;
+        return ans;
     }
-
-    public static void main(String[] args) {
-        int n = 4;
-        int[][] edges = {{0,1},{2,3}};
-        System.out.println(new CountUnreachablePairsofNodesinUndirectedGraph_2316().countPairs(n, edges));
+    public static int dfs(int i,boolean vis[],List<List<Integer>>adj){
+        vis[i]=true;
+        int cnt=1;
+        for(int z:adj.get(i)){
+            if(!vis[z]){
+                cnt+=dfs(z,vis,adj);
+            }
+        }
+        return cnt;
     }
 }
