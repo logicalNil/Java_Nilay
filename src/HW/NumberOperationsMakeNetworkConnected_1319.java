@@ -23,7 +23,7 @@ public class NumberOperationsMakeNetworkConnected_1319 {
         return count - 1;
     }
 
-    private static void union(int[] parent, int i, int j) {
+    static void union(int[] parent, int i, int j) {
         int rootI = find(parent, i);
         int rootJ = find(parent, j);
         if (rootI != rootJ) {
