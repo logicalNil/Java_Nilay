@@ -1,12 +1,14 @@
 package HW;
 
+import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Stack;
 
-/**public class SimplifyPath_71 {
+//Using Stack
+
+public class SimplifyPath_71 {
     public String simplifyPath(String path) {
-        Stack<String> s = new Stack<>();
+ /**       Stack<String> s = new Stack<>();
         StringBuilder res = new StringBuilder();
         String[] p =path.split("/");
 
@@ -26,12 +28,12 @@ import java.util.Stack;
     }
 **/
 
-public class SimplifyPath_71 {
-    public String simplifyPath(String path){
-        Queue<String> q = new LinkedList<>();
+//Using Deque
+
+ /**       Deque<String> q = new LinkedList<>();
         String[] p = path.split("/");
         for(int i=0;i<p.length;i++){
-            if(!q.isEmpty() && p[i].equals("..")) q.poll();
+            if(!q.isEmpty() && p[i].equals("..")) q.pollLast();
             else if(!p[i].equals("") && !p[i].equals(".") && !p[i].equals(".."))
                 q.offer(p[i]);
         }
@@ -40,6 +42,19 @@ public class SimplifyPath_71 {
         while(!q.isEmpty()){
             res.append("/").append(q.poll());
         }
+        return res.toString();
+    }
+  **/
+
+ //Using StringBuilder
+        StringBuilder res = new StringBuilder();
+        String[] p = path.split("/");
+        for(int i=0;i<p.length;i++){
+            if(res.length()>0 && p[i].equals("..")) res.delete(res.lastIndexOf("/"),res.length());
+            else if(!p[i].equals("") && !p[i].equals(".") && !p[i].equals(".."))
+                res.append("/").append(p[i]);
+        }
+        if(res.length()==0) return "/";
         return res.toString();
     }
     public static void main(String[] args) {
