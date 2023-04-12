@@ -45,7 +45,6 @@ public class SimplifyPath_71 {
         return res.toString();
     }
   **/
-
  //Using StringBuilder
         StringBuilder res = new StringBuilder();
         String[] p = path.split("/");
