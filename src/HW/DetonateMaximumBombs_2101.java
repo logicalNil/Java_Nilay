@@ -37,6 +37,8 @@ public class DetonateMaximumBombs_2101 {
     }
 
     public static void main(String[] args) {
-
+        DetonateMaximumBombs_2101 obj=new DetonateMaximumBombs_2101();
+        int[][] bombs={{0,0,2},{0,4,2},{2,2,2},{4,0,2},{4,4,2}};
+        System.out.println(obj.maximumDetonation(bombs));
     }
 }
