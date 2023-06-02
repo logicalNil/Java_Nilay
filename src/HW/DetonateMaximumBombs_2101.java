@@ -23,7 +23,6 @@ public class DetonateMaximumBombs_2101 {
              if(max==n)return max;
         }
         return max;
-
     }
     public int dfs(int i,boolean[] visited,boolean[][] ar){
         visited[i]=true;
