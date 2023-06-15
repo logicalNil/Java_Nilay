@@ -1,13 +1,5 @@
 package HW;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
 public class SumRootLeafNumbers_129 {
 
     public int sumNumbers(TreeNode root) {
@@ -33,5 +25,5 @@ public class SumRootLeafNumbers_129 {
         System.out.println("The sum of all root-to-leaf numbers is " + sum);
     }
     }
-}
+
 
