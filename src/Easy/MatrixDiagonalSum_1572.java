@@ -11,7 +11,6 @@ public class MatrixDiagonalSum_1572 {
         }
         return s;
     }
-
     public static void main(String[] args) {
         MatrixDiagonalSum_1572 obj = new MatrixDiagonalSum_1572();
         int[][] mat = {{1,2,3},{4,5,6},{7,8,9}};
