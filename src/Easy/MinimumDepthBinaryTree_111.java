@@ -13,5 +13,4 @@ public class MinimumDepthBinaryTree_111 {
       return minDepth(root.left) + 1;
     return 1 + Math.min(minDepth(root.left), minDepth(root.right));
     }
-
 }
